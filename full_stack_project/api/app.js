@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+var port = 9000;
 //var etag = require('etag');
 
 var indexRouter = require('./routes/index');
@@ -17,6 +18,7 @@ var newModifyList = require('./routes/modifyList');
 
 var app = express();
 
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
